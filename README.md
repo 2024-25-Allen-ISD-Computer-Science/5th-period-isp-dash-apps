@@ -1,4 +1,4 @@
-Stylo-codes-stuff/Logan Thomas
+Stylo-codes-stuff/mistah6909 - Logan Thomas
 
 Here are the setup instructions
 If you havent installed node.js install it and come back.
