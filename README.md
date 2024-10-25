@@ -9,9 +9,9 @@ cd src
 ```
 step 2: install dependencies
 ```
-npm run setup
+npm i 
 ```
 step 3: run the app
 ```
-npm start
+npm run dev
 ```
