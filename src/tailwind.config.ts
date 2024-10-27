@@ -7,6 +7,9 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontSize:{
+      "20px":"20px",
+    },
     extend: {
       colors: {
         background: "var(--background)",

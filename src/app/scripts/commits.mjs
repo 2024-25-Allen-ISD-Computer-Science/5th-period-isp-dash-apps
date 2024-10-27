@@ -39,6 +39,3 @@ async function repo_fetch(key,repo,owner){
 //fetch and jsonify all the commits in a timespan across a whole organization
 function org_fetch(){}
 console.log(await repo_fetch("placeholder","https://example.org/products.json"));
-//commit_fetch.exports = {repo_fetch,org_fetch}
-// Octokit.js
-// https://github.com/octokit/core.js#readme

@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import NavBar from "./components/navbar"
 import "./globals.css";
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const RubikRegular = localFont({
+  src: "./fonts/Rubik-Regular.ttf",
+  variable: "--font-rubik",
   weight: "100 900",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+const RubikBold = localFont({
+  src: "./fonts/Rubik-Bold.ttf",
+  variable: "--font-rubik-bold",
   weight: "100 900",
 });
 
@@ -24,8 +25,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
+      <body className={RubikRegular.className}>
+       <NavBar/>
       </body>
     </html>
   );
