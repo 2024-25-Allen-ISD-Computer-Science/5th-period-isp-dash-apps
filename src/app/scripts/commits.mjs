@@ -1,7 +1,7 @@
 import {Octokit} from "octokit";
-//fetch and jsonify all the commits in a timespan for a single repo i.e for the page of a single application
+//fetch and jsonify all the commits in a timespan for a single repo for the page of a single application.
 async function repo_fetch(key,repo,owner){
-  commits = {}
+  var commits = {}
   const octokit = new Octokit({auth:key})
   var res = await octokit.request('GET /repos/{owner}/{repo}/commits', {
     owner: owner,
@@ -31,11 +31,15 @@ async function repo_fetch(key,repo,owner){
                           message:commit["commit"]["message"]
                         }
                       }
-                      Object.defineProperty(commits,i, commit_json);
+                      Object.defineProperty(commits, `${i}`, {
+                        value: commit_json,
+                        writable: true,
+                        enumerable: true,
+                        configurable: true,
+                      });
   }
   return commits
 }
 
 //fetch and jsonify all the commits in a timespan across a whole organization
 function org_fetch(){}
-console.log(await repo_fetch("placeholder","https://example.org/products.json"));

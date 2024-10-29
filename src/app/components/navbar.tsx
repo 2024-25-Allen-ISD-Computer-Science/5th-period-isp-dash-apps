@@ -23,7 +23,7 @@ export default function NavBar() {
 
   <li><a className="active" href="/">Home</a></li>
   <li><a className="active" href="/apps">Apps</a></li>
-  <li><a className="active" href="/">Info</a></li>
+  <li><a className="active" href="/info">Info</a></li>
 
 
 

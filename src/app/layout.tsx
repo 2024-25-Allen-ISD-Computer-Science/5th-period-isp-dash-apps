@@ -25,8 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={RubikRegular.className}>
-       <NavBar/>
+      <body        className={`${RubikRegular.variable}  antialiased`}>
+        <NavBar/>
+        {children}
       </body>
     </html>
   );

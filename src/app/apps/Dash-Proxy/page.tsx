@@ -1,5 +1,4 @@
 import localFont from "next/font/local";
-import AppCard from "../components/appCard";
 import type { Metadata } from "next";
 const RubikBold = localFont({
   src: "../fonts/Rubik-Bold.ttf",
@@ -14,7 +13,6 @@ export default function AppsPage() {
     return (
       <>
       <div className={`${RubikBold.className} container text-30px`}>SOFTWARE AND WEB APPLICATIONS</div>
-      <AppCard/>
       </>
     );
-  }
+}

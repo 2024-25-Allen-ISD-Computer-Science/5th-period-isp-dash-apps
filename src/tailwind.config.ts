@@ -7,8 +7,17 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    //font size classes up to 80px
     fontSize:{
+      "10px":"10px",
       "20px":"20px",
+      "30px":"40px",
+      "50px":"50px",
+      "60px":"60px",
+      "70px":"70px",
+      "80px":"80px",
+
+
     },
     extend: {
       colors: {

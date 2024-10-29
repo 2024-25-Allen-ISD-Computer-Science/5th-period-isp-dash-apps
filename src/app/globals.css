@@ -101,7 +101,24 @@ nav {
   padding: 14px 16px;
 
 }
+.link_button{
+  height:50px;
+  width:fit-content;
+  background-color: hsl(231, 100%, 75%);
+  border-radius: 30px;
+  border-color:black;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 
+.link_button:active{
+ 
+
+}
 .nav-links a:hover:not(.active) {
 
   background-color: lightseagreen;
@@ -111,3 +128,9 @@ nav {
 
 
 
+.container {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding:40px
+}
