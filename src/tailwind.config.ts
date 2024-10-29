@@ -11,7 +11,8 @@ const config: Config = {
     fontSize:{
       "10px":"10px",
       "20px":"20px",
-      "30px":"40px",
+      "30px":"30px",
+      "40px":"40px",
       "50px":"50px",
       "60px":"60px",
       "70px":"70px",
