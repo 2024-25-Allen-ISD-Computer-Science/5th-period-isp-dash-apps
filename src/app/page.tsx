@@ -14,9 +14,9 @@ const RubikRegular = localFont({
 export default function Home() {
   return (
     <>
-    <div className={`${RubikBold.className} container text-30px`}>WELCOME TO DASH APPS</div>
+    <div className={`${RubikBold.className} container text-40px`}>WELCOME TO DASH APPS</div>
 
-    <div className={`${RubikBold.className} container text-30px`}> What is Dash Apps?</div>
+    <div className={`${RubikBold.className} container text-40px`}> What is Dash Apps?</div>
     <Button text="Find Us on GitHub"/>
 
     <div className={`${RubikRegular.className} container text-20px`}>The Dash Software and Web Application Suite is a collection of open source applications with the aim of

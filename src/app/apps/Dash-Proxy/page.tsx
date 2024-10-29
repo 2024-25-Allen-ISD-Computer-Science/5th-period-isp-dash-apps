@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function AppsPage() {
     return (
       <>
-      <div className={`${RubikBold.className} container text-30px`}>SOFTWARE AND WEB APPLICATIONS</div>
+      <div className={`${RubikBold.className} container text-40px`}>Dash Workerless Web Proxy</div>
       </>
     );
 }
