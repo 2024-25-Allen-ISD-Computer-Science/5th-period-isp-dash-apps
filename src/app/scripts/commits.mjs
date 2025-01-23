@@ -1,4 +1,5 @@
 import {Octokit} from "octokit";
+import "fs";
 //fetch and jsonify all the commits in a timespan for a single repo for the page of a single application.
 async function repo_fetch(key,repo,owner){
   var commits = {}
@@ -38,8 +39,10 @@ async function repo_fetch(key,repo,owner){
                         configurable: true,
                       });
   }
-  return commits
-}
+fs.writeFile('conmmits.json', String(commit_json), function (err) {
+  if (err) throw err;
+  console.log('commits logged');
+});}
 
 //fetch and jsonify all the commits in a timespan across a whole organization
 function org_fetch(){}
