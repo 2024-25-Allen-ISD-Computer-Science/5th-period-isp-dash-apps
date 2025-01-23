@@ -39,7 +39,7 @@ async function repo_fetch(key,repo,owner){
                         configurable: true,
                       });
   }
-fs.writeFile('conmmits.json', String(commit_json), function (err) {
+fs.writeFile('conmmits.json', String(commits), function (err) {
   if (err) throw err;
   console.log('commits logged');
 });}
