@@ -45,4 +45,19 @@ fs.writeFile('conmmits.json', String(commits), function (err) {
 });}
 
 //fetch and jsonify all the commits in a timespan across a whole organization
-function org_fetch(){}
+async function org_fetch(key){
+  // Octokit.js
+// https://github.com/octokit/core.js#readme
+const octokit = new Octokit({
+  auth: 'YOUR-TOKEN'
+})
+
+var res = await octokit.request('GET /orgs/Dash-Apps/repos', {
+  org: 'ORG',
+  headers: {
+    'X-GitHub-Api-Version': '2022-11-28'
+  }
+})
+console.log()
+  
+}
