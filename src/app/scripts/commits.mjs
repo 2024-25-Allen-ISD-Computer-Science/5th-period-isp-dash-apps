@@ -58,6 +58,5 @@ var res = await octokit.request('GET /orgs/Dash-Apps/repos', {
     'X-GitHub-Api-Version': '2022-11-28'
   }
 })
-console.log()
-  
+return res;  
 }
