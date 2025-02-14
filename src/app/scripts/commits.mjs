@@ -1,7 +1,7 @@
 import {Octokit} from "octokit";
-import "fs";
+import fs from 'node:fs';
 //fetch and jsonify all the commits in a timespan for a single repo for the page of a single application.
-async function repo_fetch(key,repo,owner){
+export async function repo_fetch(key,repo,owner){
   var commits = {}
   const octokit = new Octokit({auth:key})
   var res = await octokit.request('GET /repos/{owner}/{repo}/commits', {
@@ -11,6 +11,7 @@ async function repo_fetch(key,repo,owner){
       'X-GitHub-Api-Version': '2022-11-28'
       }
   })
+  console.log(res)
   for (var i =0;i < res.data.length;i++){
     const commit = res.data[i]
     var author = commit["author"]
@@ -39,24 +40,11 @@ async function repo_fetch(key,repo,owner){
                         configurable: true,
                       });
   }
-fs.writeFile('conmmits.json', String(commits), function (err) {
-  if (err) throw err;
-  console.log('commits logged');
-});}
+  fs.writeFileSync('commit_info.json',JSON.stringify(commits), function (err) {
+    if (err) throw err;
+    console.log('Updated!');
+  });}
 
 //fetch and jsonify all the commits in a timespan across a whole organization
-async function org_fetch(key){
-  // Octokit.js
-// https://github.com/octokit/core.js#readme
-const octokit = new Octokit({
-  auth: 'YOUR-TOKEN'
-})
+function org_fetch(){}
 
-var res = await octokit.request('GET /orgs/Dash-Apps/repos', {
-  org: 'ORG',
-  headers: {
-    'X-GitHub-Api-Version': '2022-11-28'
-  }
-})
-return res;  
-}
