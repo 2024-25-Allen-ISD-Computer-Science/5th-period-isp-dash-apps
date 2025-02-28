@@ -2,7 +2,7 @@ import {Octokit} from "octokit";
 import fs from 'node:fs';
 //fetch and jsonify all the commits in a timespan for a single repo for the page of a single application.
 export async function repo_fetch(key,repo,owner){
-  var commits = {}
+  var commits = []
   const octokit = new Octokit({auth:key})
   var res = await octokit.request('GET /repos/{owner}/{repo}/commits', {
     owner: owner,
@@ -33,12 +33,7 @@ export async function repo_fetch(key,repo,owner){
                           message:commit["commit"]["message"]
                         }
                       }
-                      Object.defineProperty(commits, `${i}`, {
-                        value: commit_json,
-                        writable: true,
-                        enumerable: true,
-                        configurable: true,
-                      });
+                      commits.push(commit_info);
   }
   fs.writeFileSync('commit_info.json',JSON.stringify(commits), function (err) {
     if (err) throw err;
@@ -47,4 +42,3 @@ export async function repo_fetch(key,repo,owner){
 
 //fetch and jsonify all the commits in a timespan across a whole organization
 function org_fetch(){}
-
