@@ -41,6 +41,7 @@ export default function Home() {
         <div class="sub-content">
             <div class="small-box">Small Box 1</div>
             <div class="small-box">Small Box 2</div>
+            <div class="small-box">Small Box 3</div>
         </div>
         <footer class="footer">Footer</footer>
     </div>
