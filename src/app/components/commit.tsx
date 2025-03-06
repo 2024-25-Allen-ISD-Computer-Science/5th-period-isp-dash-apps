@@ -1,13 +1,23 @@
 import commits from "../../commit_info.json";
 export default function Commit({commit_info}) {
     return (
+      <>
         <ul>
+          
         {commits.commits.map((commit) => (
-          <li key={commit.user_info}>{info.}</li>
+          <>
+          <div  className="commitlist"key={commit.commit_no}>
+            <div className="commits">
+              {commit.commit_info.message}
+          <img src="https://github.com/stylo-codes-stuff.png?size=25"></img>
+          </div>
+          </div>
+
+          </>
         ))}
-      </ul>    );
+      </ul>    
+      </>
+      );
   }
 
-function map_element(){
-    return "hello";
-}
+

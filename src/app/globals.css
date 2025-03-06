@@ -57,7 +57,7 @@ nav {
 
   min-height: 8vh;
 
-  background-color: teal;
+  background-color: rgb(255, 255, 255);
 
   font-family: "Montserrat", sans-serif;
 
@@ -92,7 +92,7 @@ nav {
 
 .nav-links a {
 
-  color: hsl(56, 100%, 70%);
+  color: hsl(0, 0%, 0%);
 
   text-decoration: none;
 
@@ -125,21 +125,18 @@ nav {
 }
 .nav-links a:hover:not(.active) {
 
-  background-color: lightseagreen;
+  background-color: rgb(170, 170, 170);
 
 }
-
+.container{
+  margin: auto;
+  width: fit-content;
+  padding: 10px;
+}
 
 
 //Grid css 
-.container {
-  max-width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  align-items: center;
-  padding:40px
-}
+
 
 
 * {
@@ -147,19 +144,19 @@ nav {
     padding: 0;
     box-sizing: border-box;
 }
-.container {
+.boxcontainer {
     display: grid;
     justify-content: center;
     grid-template-rows: 80px auto auto 60px;
     grid-template-columns: 1fr;
     gap: 10px;
-    width: 80%;
+    width: max-content;
     max-width: 1200px;
 }
 
 /* Header */
 .header {
-    background: #8f8f8f;
+    background: #cacaca;
     color: rgb(0, 0, 0);
     text-align: center;
     line-height: 80px;
@@ -201,6 +198,7 @@ nav {
     align-items: center;
     justify-content: center;
     color: rgb(0, 0, 0);
+    border-radius:10px;
     font-size: 18px;
 }
 
@@ -211,4 +209,32 @@ nav {
     text-align: center;
     line-height: 60px;
     font-size: 20px;
+    width:100%;
+}
+.updates-section{
+  background: #cacaca;
+  padding:15px;
+  border-radius: 5px;
+}
+.updates-section h2{
+  font-size: 20px;
+}
+#updates-list{
+  list-style: none;
+}
+#updates-list li{
+  background: #cacaca;
+  padding: 8px;
+  border-left: 4px solid #0a0a0a;
+}
+.commitlist{
+  border-color: #dedede;
+  border-radius: 20px;
+  border-width: 1px;
+  max-width: 200px;
+  
+
+}
+.commits img{
+  border-radius: 50%;
 }

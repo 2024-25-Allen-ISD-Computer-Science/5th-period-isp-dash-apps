@@ -3,7 +3,7 @@ import fs from 'node:fs';
 //fetch and jsonify all the commits in a timespan for a single repo for the page of a single application.
 
 export async function repo_fetch(key,repo,owner){
-  var commits = []
+  var commits ={}
   const octokit = new Octokit({auth:key})
   var res = await octokit.request('GET /repos/{owner}/{repo}/commits', {
     owner: owner,
@@ -17,7 +17,7 @@ export async function repo_fetch(key,repo,owner){
     var author = commit["author"]
     
     //this object contains two properties for user info and commit info called user_info and commit_info respectively
-    var commit_json = {[i]:{
+    var commit_json = {commit_no:i,
                         user_info:
                         {
                           author:author["login"],
@@ -32,7 +32,7 @@ export async function repo_fetch(key,repo,owner){
                           url:commit["html_url"],
                           message:commit["commit"]["message"]
                         }
-    }}
+    }
                       commits.push(commit_json);
   }
   var commits_obj= {commits};
