@@ -43,6 +43,12 @@ export default function Home() {
             <div class="small-box">Small Box 2</div>
             <div class="small-box">Small Box 3</div>
         </div>
+        <div class="updates-section">
+            <h2>Recent Updates</h2>
+            <ul id="updates-list">
+                <!-- TypeScript will insert updates here -->
+            </ul>
+        </div>
         <footer class="footer">Footer</footer>
 
       <style>
