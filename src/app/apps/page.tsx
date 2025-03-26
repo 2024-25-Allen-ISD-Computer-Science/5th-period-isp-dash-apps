@@ -14,7 +14,11 @@ export default function AppsPage() {
     return (
       <>
       <div className={`${RubikBold.className} container text-40px`}>SOFTWARE AND WEB APPLICATIONS</div>
-      <AppCard/>
+      <AppCard title={"Net Doppler"} description={"Low Level Networking software and vulnerability scanner."} version={"In development"}></AppCard>
+      <AppCard title={"Dash Proxy"} description={"Cross-Platform proxy server that allows you to evade internet censorship, and change custom settings"}></AppCard>
+      <AppCard title={"Dash Proxy"} description={"Cross-Platform proxy server that allows you to evade internet censorship, and change custom settings"}></AppCard>
+      <AppCard title={"Dash Proxy"} description={"Cross-Platform proxy server that allows you to evade internet censorship, and change custom settings"}></AppCard>
+
       </>
     );
   }
