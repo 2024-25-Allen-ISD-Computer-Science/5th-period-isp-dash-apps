@@ -192,7 +192,7 @@ nav {
   padding:5px;
 }
 .small-box {
-    background: #cacaca;
+    background-color: #cacaca;
     height: 100px;
     display: flex;
     align-items: center;
@@ -223,7 +223,7 @@ nav {
   list-style: none;
 }
 #updates-list li{
-  background: #cacaca;
+  background-color: #cacaca;
   padding: 8px;
   border-left: 4px solid #0a0a0a;
 }
@@ -249,7 +249,7 @@ nav {
 
 .version {
   color: grey;
-  font-size: 22px;
+  text-[22px];
 }
 
 .card button {
@@ -260,7 +260,7 @@ nav {
   text-align: center;
   cursor: pointer;
   width: 100%;
-  font-size: 18px;
+  text-[18px];
 }
 
 .card button:hover {
