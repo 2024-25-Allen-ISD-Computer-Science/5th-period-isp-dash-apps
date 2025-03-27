@@ -156,11 +156,11 @@ nav {
 
 /* Header */
 .header {
-    background: #cacaca;
+    background-color: #cacaca;
     color: rgb(0, 0, 0);
     text-align: center;
-    line-height: 80px;
-    font-size: 24px;
+    leading-[80];
+    text-[24px];
 }
 
 /* Main content (3 sections) */
@@ -171,7 +171,7 @@ nav {
 }
 
 .box {
-    background: #ffffff;
+    background-color: #ffffff;
     height: 150px;
     display: flex;
     align-items: center;
