@@ -156,11 +156,11 @@ nav {
 
 /* Header */
 .header {
-    background-color: #cacaca;
+    background: #cacaca;
     color: rgb(0, 0, 0);
     text-align: center;
-    leading-[80];
-    text-[24px];
+    line-height: 80px;
+    font-size: 24px;
 }
 
 /* Main content (3 sections) */
@@ -171,7 +171,7 @@ nav {
 }
 
 .box {
-    background-color: #ffffff;
+    background: #ffffff;
     height: 150px;
     display: flex;
     align-items: center;
@@ -192,7 +192,7 @@ nav {
   padding:5px;
 }
 .small-box {
-    background-color: #cacaca;
+    background: #cacaca;
     height: 100px;
     display: flex;
     align-items: center;
@@ -223,7 +223,7 @@ nav {
   list-style: none;
 }
 #updates-list li{
-  background-color: #cacaca;
+  background: #cacaca;
   padding: 8px;
   border-left: 4px solid #0a0a0a;
 }
@@ -249,7 +249,7 @@ nav {
 
 .version {
   color: grey;
-  text-[22px];
+  font-size: 22px;
 }
 
 .card button {
@@ -260,7 +260,7 @@ nav {
   text-align: center;
   cursor: pointer;
   width: 100%;
-  text-[18px];
+  font-size: 18px;
 }
 
 .card button:hover {
