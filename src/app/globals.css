@@ -227,16 +227,18 @@ nav {
   padding: 8px;
   border-left: 4px solid #0a0a0a;
 }
-.commitlist{
+.commit{
   border-color: #dedede;
   border-radius: 20px;
   border-width: 1px;
-  max-width: 200px;
+  width:400px;
   
 
 }
 .commits img{
+  padding:5px;
   border-radius: 50%;
+  display:inline-block;
 }
 .card {
   max-width: 300px;
@@ -269,4 +271,11 @@ nav {
 .card_image{
   height:fit-content;
   width: max-content;
+}
+.commitinfo1{
+  float: left;
+}
+.commit_message{
+  float:right;
+  padding: 5px;
 }

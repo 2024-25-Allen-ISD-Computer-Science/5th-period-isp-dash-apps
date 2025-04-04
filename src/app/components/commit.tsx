@@ -1,23 +1,39 @@
 import commits from "../../commit_info.json";
-export default function Commit({commit_info}) {
-    return (
-      <>
-        <ul>
-          
+import localFont from 'next/font/local';
+const Roboto = localFont({
+  //src/app/components/commit.tsx
+  src: "../fonts/Roboto-Light.ttf",
+  variable: "--font-Roboto-Black",
+});
+//{`${RubikBold.className} container text-40px`}
+export default function Commit({ commit_info }) {
+  return (
+    <>
+      <ul>
+
         {commits.commits.map((commit) => (
           <>
-          <div  className="commitlist"key={commit.commit_no}>
-            <div className="commits">
-              {commit.commit_info.message}
-          <img src="https://github.com/stylo-codes-stuff.png?size=25"></img>
-          </div>
-          </div>
+          
+            <div className={`${Roboto.className} commit`} key={commit.commit_no}>
+              <div className="commits">
+                <div className="commit_message">
+                  {commit.commit_info.message}
+                </div>
+                <p>
+                {commit.commit_no}
+
+                  <img src="https://github.com/stylo-codes-stuff.png?size=25"></img>
+                  {commit.user_info.author}
+                </p>
+
+              </div>
+            </div>
 
           </>
         ))}
-      </ul>    
-      </>
-      );
-  }
+      </ul>
+    </>
+  );
+}
 
 
